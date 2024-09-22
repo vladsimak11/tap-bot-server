@@ -1,8 +1,10 @@
-// const express = require('express');
-// const router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-// const { listScores } = require("../../controllers/data");
+const { addScore, getScores } = require("../../controllers/data");
 
-// router.get('/', listScores);
+// router.get('/scores', getScore);
+router.post('/scores', addScore);
+router.get('/scores', getScores);
 
-// module.exports = router;
+module.exports = router;
